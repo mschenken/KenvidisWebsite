@@ -12,11 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0e0f0c;
-      --fg: #e8e4d8;
-      --fg-muted: #8b8878;
-      --accent: #c9a96e;
-      --border: rgba(232, 228, 216, 0.08);
+      --bg: #FAF8F3;
+      --fg: #1F2421;
+      --logo: #1A3B3A;
+      --fg-muted: #1A3B3A;
+      --accent: #5BA8B8;
+      --border: rgba(26, 59, 58, 0.15);
       --serif: 'Fraunces', 'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif;
       --mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
     }
@@ -54,7 +55,7 @@
       transform: translateX(-50%);
       width: 120vw;
       height: 80vh;
-      background: radial-gradient(ellipse at center, rgba(201, 169, 110, 0.10) 0%, transparent 60%);
+      background: radial-gradient(ellipse at center, rgba(91, 168, 184, 0.12) 0%, transparent 60%);
       pointer-events: none;
       z-index: 0;
     }
@@ -121,6 +122,7 @@
     h1 {
       font-family: var(--serif);
       font-weight: 300;
+      color: var(--logo);
       font-size: clamp(2.75rem, 8vw, 6.5rem);
       line-height: 1.02;
       letter-spacing: -0.03em;
