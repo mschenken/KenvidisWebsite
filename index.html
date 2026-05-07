@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kenvidis — Bringing AI into your business</title>
+  <title>Kenvidis — Let's bring AI into your business</title>
   <meta name="description" content="Kenvidis helps companies integrate artificial intelligence into the way they work." />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
@@ -157,6 +157,25 @@
       animation: widen 1s ease-out 0.8s both;
     }
 
+    .hero {
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero .lede {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-divider {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .contact {
       display: flex;
       flex-direction: column;
@@ -212,6 +231,116 @@
       50% { opacity: 0.5; transform: scale(1.3); }
     }
 
+    .section {
+      padding: 2rem 0;
+      animation: fadeUp 1s ease-out both;
+    }
+
+    .section .eyebrow {
+      display: block;
+      margin-bottom: 1.75rem;
+      animation: none;
+    }
+
+    .marquee {
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%);
+              mask-image: linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 3rem;
+      animation: marquee-scroll 50s linear infinite;
+      font-family: var(--mono);
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      color: var(--fg-muted);
+      white-space: nowrap;
+    }
+
+    .marquee:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track {
+        animation: none;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1.5rem 2.5rem;
+      }
+    }
+
+    .stack-sub {
+      margin-top: 1.5rem;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--fg);
+      max-width: 52ch;
+    }
+
+    .solution {
+      margin-bottom: 3rem;
+    }
+
+    .solution:last-child {
+      margin-bottom: 0;
+    }
+
+    .solution-num {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .solution h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      color: var(--logo);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .solution p {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1rem, 1.2vw, 1.1rem);
+      line-height: 1.6;
+      max-width: 52ch;
+      color: var(--fg);
+    }
+
+    .about-body {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+      line-height: 1.6;
+      max-width: 52ch;
+      color: var(--fg);
+    }
+
+    .signature {
+      margin-top: 1.25rem;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--fg-muted);
+    }
+
     @media (max-width: 640px) {
       header, main, footer {
         padding-left: 1.5rem;
@@ -221,6 +350,9 @@
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
+      }
+      .stack-row {
+        gap: 1.5rem 2rem;
       }
     }
   </style>
@@ -232,11 +364,71 @@
   </header>
 
   <main>
-    <h1>Bringing <em>AI</em> into your business.</h1>
-    <p class="lede">
-      Kenvidis helps companies integrate artificial intelligence into the way they work — practically, thoughtfully, and built to last.
-    </p>
+    <div class="hero">
+      <h1>Bringing <em>AI</em> into your business.</h1>
+      <p class="lede">
+        Kenvidis helps companies integrate artificial intelligence into the way they work — practically, thoughtfully, and built to last.
+      </p>
+      <hr class="divider hero-divider" />
+    </div>
+
+    <section class="section">
+      <span class="eyebrow">001 — Powered by</span>
+      <div class="marquee" aria-label="Powered by Anthropic, OpenAI, Google Gemini, AWS, Google Cloud, Azure, Vector Databases, RAG Pipelines, CRM Integration, ERP Integration, Workflow Automation, Hugging Face, n8n, Zapier">
+        <div class="marquee-track" aria-hidden="true">
+          <span>Anthropic</span><span>OpenAI</span><span>Google Gemini</span>
+          <span>AWS</span><span>Google Cloud</span><span>Azure</span>
+          <span>Vector Databases</span><span>RAG Pipelines</span>
+          <span>CRM Integration</span><span>ERP Integration</span>
+          <span>Workflow Automation</span>
+          <span>n8n</span><span>Zapier</span>
+          <span>Anthropic</span><span>OpenAI</span><span>Google Gemini</span>
+          <span>AWS</span><span>Google Cloud</span><span>Azure</span>
+          <span>Vector Databases</span><span>RAG Pipelines</span>
+          <span>CRM Integration</span><span>ERP Integration</span>
+          <span>Workflow Automation</span>
+          <span>n8n</span><span>Zapier</span>
+        </div>
+      </div>
+      <p class="stack-sub">We build on the platforms that move fastest.</p>
+    </section>
+
     <hr class="divider" />
+
+    <section class="section">
+      <span class="eyebrow">002 — Solutions</span>
+
+      <div class="solution">
+        <span class="solution-num">01 / Strategy &amp; Advisory</span>
+        <h2>Where AI creates real leverage.</h2>
+        <p>We help leadership teams identify where AI creates real leverage — and where it doesn't. Roadmaps, opportunity audits, and the quiet conversations that get a program off the ground.</p>
+      </div>
+
+      <div class="solution">
+        <span class="solution-num">02 / Custom Build &amp; Integration</span>
+        <h2>Engineering for the systems that matter.</h2>
+        <p>Hands-on engineering for the systems that matter most. Agents, retrieval pipelines, and integrations woven into the tools your team already uses.</p>
+      </div>
+
+      <div class="solution">
+        <span class="solution-num">03 / Workflow Automation</span>
+        <h2>Operational AI, quietly applied.</h2>
+        <p>Operational AI for the work that shouldn't need a human anymore. We find the repetitive surface area in your business and quietly remove it.</p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section class="section">
+      <span class="eyebrow">003 — About</span>
+      <p class="about-body">
+        "The reason we started Kenvidis is simple: to help businesses reach their potential by adapting to the changing landscape around them. If a company chooses not to pursue the capabilities AI offers, it will be left behind."
+      </p>
+      <p class="signature">— Michael Schenken, Founder</p>
+    </section>
+
+    <hr class="divider" />
+
     <div class="contact">
       <span class="contact-label">Get in touch</span>
       <a href="mailto:michael@kenvidis.com">michael@kenvidis.com</a>
