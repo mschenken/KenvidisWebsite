@@ -88,6 +88,25 @@
       color: var(--fg-muted);
     }
 
+    .mark {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      text-transform: none;
+      color: var(--logo);
+      line-height: 1;
+    }
+
+    .mark-logo {
+      width: 3rem;
+      height: 3rem;
+      display: block;
+    }
+
     .status {
       display: flex;
       align-items: center;
@@ -359,7 +378,10 @@
 </head>
 <body>
   <header>
-    <div class="mark">Kenvidis</div>
+    <div class="mark">
+      <img src="favicon.svg" alt="" class="mark-logo" />
+      <span>Kenvidis</span>
+    </div>
     <div class="status">Est. 2025</div>
   </header>
 
